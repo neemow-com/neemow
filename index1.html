@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+</head>
+<body>
+
+<script>
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    window.location.href = "https://neemow.com/?to=neemow://neemow.com/signin";
+  } else {
+    window.location.href = "https://neemow-5d4cfz.flutterflow.app/signin";
+  }
+</script>
+
+</body>
+</html>
