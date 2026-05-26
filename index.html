@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Redirecting to verification...</title>
+  <title>Redirecting...</title>
 </head>
 <body>
-
 <script>
   const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-  // 🔥 IMPORTANT: token (hash) get karo
   const hash = window.location.hash;
+  const path = window.location.pathname;
 
-  if (isMobile) {
-    window.location.href = "https://neemow.com/?to=neemow://neemow.com/signin" + hash;
+  if (path.includes('resetpassword')) {
+    // Reset Password redirect
+    if (isMobile) {
+      window.location.href = "https://neemow.com/?to=neemow://neemow.com/resetpassword" + hash;
+    } else {
+      window.location.href = "https://neemow-5d4cfz.flutterflow.app/resetpassword" + hash;
+    }
   } else {
-    window.location.href = "https://neemow-5d4cfz.flutterflow.app/signin" + hash;
+    // Sign In redirect (existing)
+    if (isMobile) {
+      window.location.href = "https://neemow.com/?to=neemow://neemow.com/signin" + hash;
+    } else {
+      window.location.href = "https://neemow-5d4cfz.flutterflow.app/signin" + hash;
+    }
   }
 </script>
-
 </body>
 </html>
