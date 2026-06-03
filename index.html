@@ -11,11 +11,7 @@
 
   if (search.includes('type=resetpassword') || hash.includes('type=recovery')) {
     // Reset Password redirect
-    if (isMobile) {
-      window.location.href = "https://neemow.com/?to=neemow://neemow.com/resetpassword" + hash;
-    } else {
       window.location.href = "https://neemow-5d4cfz.flutterflow.app/resetpassword" + hash;
-    }
   } else {
     // Sign In redirect
     if (isMobile) {
